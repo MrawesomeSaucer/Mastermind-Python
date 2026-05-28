@@ -13,7 +13,9 @@ Feed back is given based on the codebeaker's guess.
 - Red means the color or item is in the correct spot.
 - White means the color or item is in the sequence but the wrong spot.
 - Black means that the color or item is not in the sequence.
+
 Code breaker keeps guessing until the correct sequence is guessed or number of attempts runs out.
+
 This is a modified version of mastermind. In a real game of mastermind, feed back does not correspond to the input, but here it does. This is to allow longer sequence and longer pool and faster game play!
 ## Customizing
 Now that you know the basics of the mastermind game. You should know about how to start a game of mastermind in this program. Before you start the game, you will have the chance to customize your game of mastermind. There are 3 modes for you to choose from: easy, hard, and custom. Think of easy and hard mode like presets, most of the customization is already set up for you. The only customization you can have in easy and hard mode are allow duplicates, mastermind and codebreaker. Allow duplicates allow you to have repeating item in your sequence which can increase the difficulty. The mastermind (code maker) can be a human or the computer will make the sequence for you, same goes for codebreaker.
