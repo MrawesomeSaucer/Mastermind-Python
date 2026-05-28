@@ -2,6 +2,7 @@
 This is a mastermind game that runs in the terminal. You can use the code as inspiration, examples or use it in your own project. Of course, you can just play it and have fun!
 # How to run
 Download the .zip file, extract into a folder, run MastermindMain.py. Preferred Python Version: 3.14
+
 Make sure MastermindAI.py, GameLogic.py, constants.py, and Leaderboard.py is inside Logic folder
 # How to play
 ## Game description
