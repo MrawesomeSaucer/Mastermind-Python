@@ -29,6 +29,8 @@ If you are a codebreaker, you can enter a name to be saved on the leaderboard. A
 You can compete with your friends to see who can have the highest score!
 ## Navigating
 You need to navigate the program using keyboard inputs. The available options of inputs will be listed when asked for input. Just type the letter or option you want and press enter to register it. Remember that at any point of program and any input chance you can input "q" to exit the program. 
+## AI
+This program includes a simple and stright forward codebreaker AI. You can try it with a very large sequence as this program allows. It can be quite fun watching it solving a hundreds line sequence. You can use this AI as examples (good or bad) or as inspiration and use it in your own project.
 
 # Author
 Everything created and maintained by Haochen H
