@@ -1,9 +1,47 @@
 # Program overview
 This is a mastermind game that runs in the terminal. You can use the code as inspiration, examples or use it in your own project. Of course, you can just play it and have fun!
-# How to run
-Download the .zip file, extract into a folder, run MastermindMain.py. Preferred Python Version: 3.14
 
-Make sure MastermindAI.py, GameLogic.py, constants.py, and Leaderboard.py is inside Logic folder
+# How to Run
+
+## Prerequisites
+
+- Python 3.10 or newer
+- pip
+- Git (optional, if cloning the repository)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/MrawesomeSaucer/Mastermind-Python.git
+cd Mastermind-Python
+```
+
+2. Install the project:
+
+```bash
+pip install .
+```
+
+3. Run the game:
+
+```bash
+mastermind_python
+```
+
+### Or download the ZIP
+
+1. Download the repository as a ZIP from GitHub.
+2. Extract it.
+3. Open a terminal in the extracted folder.
+4. Run:
+
+```bash
+pip install .
+mastermind_python
+```
+  
 # How to play
 ## Game description
 Mastermind is a classic code breaking that involves logic, deduction, and strategy.
