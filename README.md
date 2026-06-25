@@ -30,7 +30,7 @@ mastermind_python
 ```
 ### Or download the ZIP
 
-1. Download the repository as a ZIP from GitHub.
+1. Download the repository as a ZIP from Releases (V1.1).
 2. Extract it.
 3. Open a terminal in the extracted folder.
 4. Run:
