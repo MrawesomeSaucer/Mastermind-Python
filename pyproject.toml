@@ -1,0 +1,24 @@
+[project]
+name = "mastermind_python"
+version = "1.1.0"
+requires-python = ">=3.9"
+license = "MIT"
+readme = "README.md"
+description = "a python implementaion of the game Mastermind"
+authors = [
+    { name = "Haochen Huang"}
+]
+maintainers = [
+    { name = "Haochen Huang"}
+]
+
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+mastermind_python = "mastermind_python.Main:main"
+
+[project.urls]
+Homepage = "https://github.com/MrawesomeSaucer/Mastermind-Python"
+Repository = "https://github.com/MrawesomeSaucer/Mastermind-Python"
