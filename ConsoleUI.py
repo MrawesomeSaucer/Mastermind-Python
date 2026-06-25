@@ -1,16 +1,17 @@
 import string
 from typing import *
-from Logic.constants import GameResult, GameOptionMapping
+from .constants import GameResult, GameOptionMapping
 
 COLORS_MAP = {
-            'black':'\033[30m',
-            'red':'\033[31m',
-            'green':'\033[32m',
-            'yellow':'\033[33m',
-            'blue':'\033[34m',
-            'magenta':'\033[35m',
-            'white':'\033[37m'
-        }
+    "black": "\033[38;5;242m",
+    "red": "\033[38;5;9m",
+    "green": "\033[38;5;10m",
+    "yellow": "\033[38;5;11m",
+    "blue": "\033[38;5;12m",
+    "magenta": "\033[38;5;13m",
+    "cyan": "\033[38;5;14m",
+    "white": "\033[38;5;250m",
+}
 
 COLOR_RESET = '\033[0m'
 AVAILABLE_CHARACTERS = list(string.ascii_letters+string.digits+string.punctuation)
@@ -19,19 +20,19 @@ INPUT_PROMPT = '> '
 
 SEPERATOR = '\n---------------------------------------------\n'
 GAME_DESCRIPTION = (
-            '\nGame description'
+            '\nGame desciption'
             f'{SEPERATOR}'
             'Mastermind is a classic code breaking that involves logic, deduction, and strategy.\n\n'
 
             'Objective'
             f'{SEPERATOR}'
             'One player, or the game itself creates a secret code, and the other player tries to guess it in as few attempts as possible.\n'
-            'The code breaker wins by successfully guessing code based on attempts and feed backs. The code maker wins by creating a code that the code breaker cannot break.\n\n'
+            'The code breaker wins by successfullly guessing code based on attempts and feed backs. The code maker wins by creating a code that the code breaker cannot break.\n\n'
 
             'Gameplay'
             f'{SEPERATOR}'
-            'The code breaker makes a guess by inputting a sequence of color or item.\n'
-            'Feed back is given based on the codebeaker\'s guess.\n'
+            'The code breaker makes a guess by inputing a sequence of color or item.\n'
+            'Feed back is given based on the code eaker\'s guess.\n'
             'Red means the color or item is in the correct spot.\n'
             'White means the color or item is in the sequence but the wrong spot.\n'
             'Black means that the color or item is not in the sequence.\n'
@@ -44,8 +45,8 @@ GAME_DESCRIPTION = (
             'Now that you know the basics of the mastermind game. You should know about how to start a game of mastermind in this program.\n'
             'Before you start the game, you will have the chance to customize your game of mastermind.\n'
             'There are 3 modes for you to choose from: easy, hard, and custom.\n'
-            'Think of easy and hard mode like presets, most of the customization is already set up for you.\n'
-            'The only customization you can have in easy and hard mode are allow duplicates, mastermind and codebreaker.\n'
+            'Think of easy and hard mode like presets, most of the customization is already setted up for you.\n'
+            'The only customization you can have in easy and hard mode are allow dupicates, mastermind and codebreaker.\n'
             'Allow duplicates allow you to have repeating item in your sequence which can increase the difficulty.\n'
             'The mastermind (code maker) can be a human or the computer will make the sequence for you, same goes for codebreaker.\n\n'
 
@@ -63,8 +64,8 @@ GAME_DESCRIPTION = (
 
             'Navigating'
             f'{SEPERATOR}'
-            'You need to navigate the program using keyboard inputs. The available options of inputs will be listed when asked for input. Just type the letter or option you want and press enter to register it.\n'
-            'Remember that at any point of program and any input chance you can input "q" to exit the program. \n'
+            'You need to navigate the program using keyboard inputs. The avaliable options of inputs will be listed when asked for input. Just type the letter or option you want and press enter to register it.\n'
+            'Remeber that at any point of program and any input chance you can input "q" to exit the program. \n'
         )
 
 LINE_LIMIT = 25

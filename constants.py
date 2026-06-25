@@ -3,7 +3,6 @@ class GameConstants:
     ATTEMPTS_MIN = 1
     SEQUENCE_LENGTH_MIN = 1
     POOL_LENGTH_MIN = 2
-    AI_MAKE_MOVE_PAUSE_TIME = 3.0
     HARD_MODE_ATTEMPTS_AMOUNT = 4
     EASY_MODE_ATTEMPTS_AMOUNT = 6
     NAME_LENGTH_MAX = 20
@@ -23,7 +22,7 @@ class GameConstants:
     WIN_AND_LESS_THAN_AI = 100
 
     # leaderboard
-    LEADERBOARD_FILE_PATH = 'leaderboard.json'
+    LEADERBOARD_FILE_PATH = 'src/mastermind_python/leaderboard.json'
 
 class GameStages:
     STARTING = 0

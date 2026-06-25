@@ -1,7 +1,7 @@
 import random
 from typing import *
-from Logic.constants import GameOptionMapping, GameConstants, GameResult
-from Logic.MastermindAI import AI
+from .MastermindAI import AI
+from .constants import GameOptionMapping, GameConstants, GameResult
 
 class GameLogic():
     '''

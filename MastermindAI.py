@@ -2,10 +2,10 @@
 import random
 import time
 from typing import *
-from Logic.constants import GameConstants, GameResult
+from .constants import GameResult
 
 '''
-AI/algorithm explanation
+AI/algorithm explaination
 
 First Step:
 There will be a dictionary containing all the possible guess as key, and there possible positions as value. 
@@ -19,7 +19,7 @@ green is second, index 1 is already taken, so the next possible position is 2. g
 
 From there each possible guess will be place until the move is complete
 
-If the sequence length is 4, the current move will be: red green purple blue
+If the sequence lenght is 4, the current move will be: red green purple blue
 
 Second Step:
 Based on each output, possible guesses and possible positions of each guess is modified.
@@ -30,6 +30,7 @@ this index is removed from the guess' possible positions
 A white output means that the guess is not in the correct spot but in the sequence.
 This tried spot is removed from the guess' possible positions
 
+
 A red return means the guess correct, which means that the spot can be locked in and no longer needed to be tried; a list will stroe the confirmed guesses.
 The correct spot will also be removed from other guesses' possible positions as other guesss no longer need to be tried there.
 If allow duplicates is off, this guess also can be completely removed from the dictionary.
@@ -39,7 +40,7 @@ from the first step, the input is red green purple blue
 
 lets say the output is red white white black
 
-red is correct so lock in the position, and also remove this index from other guesses to prevent them from trying this spot. 
+red is correct so lock in the possition, and also remove this index from other guesses to prevent them from trying this spot. 
 modification from this guess: remove index 1 from all the guesses. if allow_duplicates is off, remove it from the dictionary
 
 green and purple are in the sequence but in the wrong spot
@@ -178,7 +179,7 @@ class AI:
 
         return current_planned_move
 
-    def AI_make_move(self, sequence_length: int, pool: List[str], allow_duplicates: bool) -> List[str]:
+    def AI_make_move(self, sequence_length: int, pool: List[str], allow_duplicates: bool, attempts_amount: int) -> List[str]:
         '''
         seperate the delay and the actual make move function
 
@@ -192,7 +193,7 @@ class AI:
         current_move_list = self.make_move(sequence_length, pool, allow_duplicates)
 
         # add delay to prevent AI from instantly making the move
-        time.sleep(GameConstants.AI_MAKE_MOVE_PAUSE_TIME)
+        time.sleep(self.get_pause_time(attempts_amount))
 
         return current_move_list
     
@@ -391,3 +392,22 @@ class AI:
                 current_move_list = self.fall_back_add_random_item(current_move_list, pool)
 
         return current_move_list
+    
+    def get_pause_time(self, attempts_amount: int) -> float:
+        '''
+        get AI pause time based on the # of attempts
+
+        :param attempts_amount: use to determine pause time
+
+        :return:
+            pause time
+        '''
+        pause_time = 0
+        if attempts_amount <= 10:
+            pause_time = 2
+        elif attempts_amount <= 100:
+            pause_time = 0.1
+        else:
+            pause_time = 0
+
+        return pause_time

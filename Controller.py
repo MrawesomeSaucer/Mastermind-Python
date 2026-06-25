@@ -1,11 +1,11 @@
 import sys
 from typing import *
-from ConsoleUI import UI
-from Logic.GameLogic import GameLogic
-from GameConfig import GameAttributes, GameState
-from Logic.constants import GameConstants, GameOptionMapping, GameStages
-from Logic.MastermindAI import AI
-from Logic.LeaderboardManager import LeaderboardManager
+from .ConsoleUI import UI
+from .GameLogic import GameLogic
+from .GameConfig import GameAttributes, GameState
+from .constants import GameConstants, GameOptionMapping, GameStages
+from .MastermindAI import AI
+from .LeaderboardManager import LeaderboardManager
 
 class MastermindGame():
     '''The controller class, combines all the logic, UI, and settings to run the game'''
@@ -542,7 +542,7 @@ class MastermindGame():
 
                 self.ui.AI_pause_caption()
 
-                inputed = self.codebreaker_ai.AI_make_move(self.game_attributes.sequence_length, self.game_attributes.pool, self.game_attributes.allow_duplicates)
+                inputed = self.codebreaker_ai.AI_make_move(self.game_attributes.sequence_length, self.game_attributes.pool, self.game_attributes.allow_duplicates, self.game_attributes.attempts)
             
             else:
                 inputed = self.playing_get_player_input_helper()

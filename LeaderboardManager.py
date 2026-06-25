@@ -1,7 +1,7 @@
 import json
 import os
-from Logic.constants import GameConstants
 from typing import *
+from .constants import GameConstants
 
 class LeaderboardManager:
     '''class to manage the leaderboard'''
@@ -103,27 +103,13 @@ class LeaderboardManager:
         '''
         pleaderboard = self.load()
 
-        # list of placeholder
-        nleaderboard = [None for _ in pleaderboard]
+        # sort using ['score']
+        pleaderboard = sorted(pleaderboard, key=lambda placement: placement['score'], reverse=True)
 
-        # sort the score in reverse order so biggest score is the first, 
-        # the placement of the score is the placement of the records
-        # the same score will just be the previous placement of the records, whoever comes first claims the higher spot
-        scores_order = sorted([record['score'] for record in pleaderboard], reverse=True)
-        for record in pleaderboard:
-            for placement, score in enumerate(scores_order):
-                if record['score'] != score:
-                    continue
-                # prevent the same score record from taking the spot of other same score record
-                if nleaderboard[placement] is not None:
-                    continue
-                nleaderboard[placement] = record
-                break
-        
         # save
-        self.save(nleaderboard)
+        self.save(pleaderboard)
 
-        return
+        return        
     
     def update_leaderboard(self, name: str, score: int) -> None:
         '''
