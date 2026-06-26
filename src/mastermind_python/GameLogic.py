@@ -1,5 +1,6 @@
 import random
 from typing import *
+from pathlib import Path
 from .MastermindAI import AI
 from .constants import GameOptionMapping, GameConstants, GameResult
 
@@ -9,6 +10,15 @@ class GameLogic():
     '''
     def __init__(self):
         self.ai = AI()
+
+    def get_project_root(self):
+        current_file = Path(__file__).resolve()
+        for parent in current_file.parents:
+            print(parent)
+            if (parent / '__init__.py').exists():
+                return parent
+        
+        raise FileNotFoundError('pyproject.toml not found')
 
     def parse_int_input(self, player_input: str) -> bool:
         '''

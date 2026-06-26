@@ -1,12 +1,15 @@
 import json
 import os
 from typing import *
-from .constants import GameConstants
+from .GameLogic import GameLogic
 
 class LeaderboardManager:
     '''class to manage the leaderboard'''
     def __init__(self):
-        self.file_path = GameConstants.LEADERBOARD_FILE_PATH
+        self.logic = GameLogic()
+
+        self.file_path = f'{self.logic.get_project_root()}/leaderboard.json'
+
         # indent make the file more readable
         self.indent = 4
 

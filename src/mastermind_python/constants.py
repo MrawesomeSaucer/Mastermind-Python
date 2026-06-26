@@ -21,9 +21,6 @@ class GameConstants:
     MORE_SEQUENCE_LENGTH_MODIFIER = 1.5
     WIN_AND_LESS_THAN_AI = 100
 
-    # leaderboard
-    LEADERBOARD_FILE_PATH = 'src/mastermind_python/leaderboard.json'
-
 class GameStages:
     STARTING = 0
     CUSTOMIZING = 1

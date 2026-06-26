@@ -65,7 +65,12 @@ GAME_DESCRIPTION = (
             'Navigating'
             f'{SEPERATOR}'
             'You need to navigate the program using keyboard inputs. The avaliable options of inputs will be listed when asked for input. Just type the letter or option you want and press enter to register it.\n'
-            'Remeber that at any point of program and any input chance you can input "q" to exit the program. \n'
+            'Remeber that at any point of program and any input chance you can input "q" to exit the program. \n\n'
+
+            'AI'
+            f'{SEPERATOR}'
+            'This program includes a simple and stright forward codebreaker AI.\n'
+            'You can try it with a very large sequence as this program allows, which can be quite fun watching it.\n'
         )
 
 LINE_LIMIT = 25
