@@ -6,7 +6,7 @@ This is a mastermind game that runs in the terminal. You can use the code as ins
 
 - Python 3.10 or newer
 - pip
-- Git (optional, if cloning the repository)
+- Git
 
 ## Installation
 
@@ -28,17 +28,7 @@ pip install .
 ```bash
 mastermind_python
 ```
-### Or download the ZIP
 
-1. Download the repository as a ZIP from Releases (V1.1).
-2. Extract it.
-3. Open a terminal in the extracted folder.
-4. Run:
-
-```bash
-pip install .
-mastermind_python
-```
 # How to play
 ## Game description
 Mastermind is a classic code breaking that involves logic, deduction, and strategy.
